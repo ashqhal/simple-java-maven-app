@@ -32,5 +32,11 @@ pipeline {
                 }
             }
         }
+        stage('Checkout') {
+            steps {
+                // Checkout code from GitHub repository
+                git credentialsId: 'ashqhalani', url: 'https://github.com/ashqhal/simple-java-maven-app.git'
+            }
+        }
     }
 }
